@@ -18,4 +18,4 @@ Design justification
 - Mapping strategy: numeric attributes (e.g., HP, Attack, Speed) map to pitch, amplitude, and temporal density; categorical attributes (e.g., type) map to timbre or synthesis presets. This combination preserves interpretability across visual and auditory channels and supports consistent user learning.
 
 
-Final video: [link]
+Final video: https://youtu.be/WbuWXy4uIIc

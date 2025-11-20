@@ -15,7 +15,7 @@ void setup() {
   size(900, 700);
   frameRate(60);
 
-  // CARGAR TU BASE DE DATOS DE POKÉMON
+
   baseD = loadTable("pokemon.csv", "header");
 
   osc = new OscP5(this, 12000);
@@ -23,9 +23,9 @@ void setup() {
 }
 
 void draw() {
-  background(10,10,50);
+  background(90,10,50);
 
-  // Cada cierto tiempo aparece un Pokémon (3 figuras)
+
   if (frameCount % tiempoEntreFiguras == 0 && indice < baseD.getRowCount()) {
 
     figuras.add(new Figura(baseD.getRow(indice), "pokebola"));   // HP
@@ -70,7 +70,7 @@ class Figura {
     tipo = tipoFigura;
     s = 50;
 
-    // ✔ POSICIÓN ALEATORIA EN TODA LA PANTALLA
+
     x = random(50, width - 50);
     y = height + 50;
 
@@ -113,11 +113,7 @@ class Figura {
     }
   }
 
-  // ---------------------------
-  //   FIGURAS PERSONALIZADAS
-  // ---------------------------
 
-  // ⭐ ESTRELLA
   void dibujarEstrella(float cx, float cy, float r1, float r2, int puntos) {
     float ang = TWO_PI / (puntos * 2);
     beginShape();
@@ -128,7 +124,6 @@ class Figura {
     endShape(CLOSE);
   }
 
-  // ⚪ POKÉBOLA
   void dibujarPokebola(float cx, float cy, float s) {
     noStroke();
 
@@ -149,7 +144,7 @@ class Figura {
     ellipse(cx, cy, s * 0.15, s * 0.15);
   }
 
-  // 🌱 HOJA (tipo planta)
+
   void dibujarHoja(float cx, float cy, float s) {
     noStroke();
     fill(50, 200, 80);
